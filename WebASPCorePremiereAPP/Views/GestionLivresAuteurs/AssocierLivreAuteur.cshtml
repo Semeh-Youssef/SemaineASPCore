@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Associer Livre->Auteur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Associer Livre->Auteur</h1>
+
+
+
+<form asp-action="Create" enctype="multipart/form-data" method="post">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label class="control-label"></label>
+                <select name="livreId" class="form-control" asp-items="ViewBag.Livres"></select>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div>
+                <button type="submit" asp-action="AssocierLivreAuteur" class="btn btn-primary">Associer</button>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label class="control-label"></label>
+                <select name="auteurId" class="form-control" asp-items="ViewBag.Auteurs"></select>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+
